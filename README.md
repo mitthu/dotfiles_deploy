@@ -10,12 +10,12 @@ curl -sL http://bit.ly/1wgBOfx | /bin/bash -ex
 ```
 #### update.sh
 ```bash
-curl -sL https://raw.githubusercontent.com/mitthu/dotfiles_deploy/master/update.sh | /bin/bash -xe
+curl -sL http://bit.ly/VKrtY3 | /bin/bash -xe
 ```
 
 #### purge.sh
 ```bash
-curl -sL https://raw.githubusercontent.com/mitthu/dotfiles_deploy/master/purge.sh | /bin/bash -ex
+curl -sL http://bit.ly/1wgCwcx | /bin/bash -ex
 ```
 
 Deploy Script
