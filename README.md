@@ -32,4 +32,5 @@ Update Script
 Purge Script
 ------------
 - Removes all the changes made by the *deploy.sh* script.
-- The script doesn't uninstall any packages that were installed by the *deploy.sh* script
+- The script doesn't uninstall any packages that were installed by the *deploy.sh*.
+- The scrpit also doesn't remove the sourcing line added to the *.bashrc*.
