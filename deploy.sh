@@ -4,7 +4,7 @@
 #
 # Run:
 # ---
-# curl -sL <link> | bin/bash -ex
+# curl -sL <link> | /bin/bash -ex
 
 ## Config ##
 INSTALL_PACKAGES="zsh tmux vim git"

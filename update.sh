@@ -4,7 +4,7 @@
 #
 # Run:
 # ---
-# curl -sL <link> | bin/bash -ex
+# curl -sL <link> | /bin/bash -ex
  
 source $HOME/.merc
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
