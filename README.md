@@ -5,11 +5,14 @@ These scripts are used to configure new instances/box.
 #### deploy.sh
 ```bash
 curl -sL https://raw.githubusercontent.com/mitthu/dotfiles_deploy/master/deploy.sh | /bin/bash -ex
-```
 
+echo "- OR -"
+
+curl -sL http://bit.ly/1wgBOfx | /bin/bash -ex
+```
 #### update.sh
 ```bash
-curl -sL https://raw.githubusercontent.com/mitthu/dotfiles_deploy/master/update.sh | /bin/bash -ex
+curl -sL https://raw.githubusercontent.com/mitthu/dotfiles_deploy/master/update.sh | /bin/bash -xe
 ```
 
 #### purge.sh
