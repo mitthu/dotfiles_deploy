@@ -5,9 +5,7 @@ These scripts are used to configure new instances/box.
 #### deploy.sh
 ```bash
 curl -sL https://raw.githubusercontent.com/mitthu/dotfiles_deploy/master/deploy.sh | /bin/bash -ex
-
-echo "- OR -"
-
+#### - OR - ####
 curl -sL http://bit.ly/1wgBOfx | /bin/bash -ex
 ```
 #### update.sh
