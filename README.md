@@ -10,7 +10,7 @@ curl -sL http://bit.ly/1wgBOfx | /bin/bash -ex
 ```
 #### update.sh
 ```bash
-curl -sL http://bit.ly/VKrtY3 | /bin/bash -xe
+curl -sL http://bit.ly/VKrtY3 | /bin/bash -ex
 ```
 
 #### purge.sh
