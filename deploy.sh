@@ -41,7 +41,7 @@ if [[ $USER != 'root' ]]; then
 fi
 
 ## Install git and some other tools we'd like to use ##
-#$update
+$update
 $install $INSTALL_PACKAGES
 
 ## Install homeshick ##
