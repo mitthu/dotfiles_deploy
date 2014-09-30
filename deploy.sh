@@ -102,8 +102,13 @@ homeshick link --force
 homeshick cd dotfiles
 
 ## Set default shell to your favorite shell ##
-chsh --shell `which zsh` $USER </dev/tty
-echo "Log in again to start your proper shell"
+if [[ $SKIP_CHANGE_SHELL == "YES" ]]; then
+	echo "Skipping change of default shell..."
+else
+	echo "Changing default shell..."
+	chsh --shell `which zsh` $USER </dev/tty
+	echo "Log in again to start your proper shell."
+fi
 
 ## Running one-time install script
 echo "Running one time install script..."
