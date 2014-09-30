@@ -11,6 +11,26 @@ INSTALL_PACKAGES="zsh tmux vim git"
 USER=`whoami`
 DOTFILES_REPO="https://github.com/mitthu/dotfiles.git"
 
+# Utility to check for positional parameters
+PARAMS=$*
+function present() {
+	case "${PARAMS[@]}" in
+		*"$1"*)
+			echo "YES";;
+		*)
+			echo "NO";;
+	esac
+}
+
+# Default features
+SKIP_INSTALL=NO
+SKIP_CHANGE_SHELL=NO
+
+# Update features, based on parameters that are passed
+# curl <url> | bash -s param1 param2 ...
+SKIP_INSTALL=`present noinstall`
+SKIP_CHANGE_SHELL=`present noshellchange`
+
 # Setup present working directory
 cd $HOME
 
@@ -41,8 +61,13 @@ if [[ $USER != 'root' ]]; then
 fi
 
 ## Install git and some other tools we'd like to use ##
-$update
-$install $INSTALL_PACKAGES
+if [[ $SKIP_INSTALL == "YES" ]];then
+	echo "Skipping package installations..."
+else
+	echo "Updating repo and installing packages..."
+	$update
+	$install $INSTALL_PACKAGES
+fi
 
 ## Install homeshick ##
 git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
