@@ -8,6 +8,17 @@ curl -sL https://raw.githubusercontent.com/mitthu/dotfiles_deploy/master/deploy.
 #### - OR - ####
 curl -sL http://bit.ly/1wgBOfx | /bin/bash -ex
 ```
+You can pass parameters to `deploy.sh` to skip specific section(s) of the deployment process. For example:
+```bash
+# Example run using parameters: Skip pkg install and shellchange
+curl -sL http://bit.ly/1wgBOfx | /bin/bash -ex -s noinstall noshellchange
+```
+##### Recognized parameters
+- `noinstall`
+  - Skip the repo. update and the package installation by the script.
+- `noshellchange`
+  - Skip the change of default shell to `zsh`.
+
 #### update.sh
 ```bash
 curl -sL http://bit.ly/VKrtY3 | /bin/bash -ex
