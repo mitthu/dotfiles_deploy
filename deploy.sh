@@ -50,7 +50,8 @@ fi
 
 if [[ $DISTRO == "redhat" ]]; then
 	install="yum install -y"
-	update="yum update"
+	# Updating of repo. list is not required.
+	update=""
 fi
 
 # Append 'sudo' to commands, if !(root user)
