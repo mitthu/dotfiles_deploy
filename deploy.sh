@@ -51,7 +51,7 @@ fi
 if [[ $DISTRO == "redhat" ]]; then
 	install="yum install -y"
 	# Updating of repo. list is not required.
-	update=""
+	update="echo 'No repo. update required.'"
 fi
 
 # Append 'sudo' to commands, if !(root user)
