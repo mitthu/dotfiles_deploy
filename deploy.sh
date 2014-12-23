@@ -11,6 +11,11 @@ INSTALL_PACKAGES="zsh tmux vim git"
 USER=`whoami`
 DOTFILES_REPO="https://github.com/mitthu/dotfiles.git"
 
+# Status codes
+STATUS_ALREADY_INSTALLED=-1 # Code: 255
+STATUS_SUCCESS=0
+STATUS_FAILED=1
+
 # Utility to check for positional parameters
 PARAMS=$*
 function present() {
@@ -30,6 +35,12 @@ SKIP_CHANGE_SHELL=NO
 # curl <url> | bash -s param1 param2 ...
 SKIP_INSTALL=`present noinstall`
 SKIP_CHANGE_SHELL=`present noshellchange`
+
+# Halt if already installed
+if [[ -f $HOME/.merc && -d $HOME/.me ]]; then
+	echo "Already installed. Stop."
+	exit $STATUS_ALREADY_INSTALLED
+fi
 
 # Setup present working directory
 cd $HOME
