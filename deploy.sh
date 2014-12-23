@@ -12,9 +12,9 @@ USER=`whoami`
 DOTFILES_REPO="https://github.com/mitthu/dotfiles.git"
 
 # Status codes
-STATUS_ALREADY_INSTALLED=-1 # Code: 255
 STATUS_SUCCESS=0
 STATUS_FAILED=1
+STATUS_CHANGED=2
 
 # Utility to check for positional parameters
 PARAMS=$*
@@ -39,7 +39,7 @@ SKIP_CHANGE_SHELL=`present noshellchange`
 # Halt if already installed
 if [[ -f $HOME/.merc && -d $HOME/.me ]]; then
 	echo "Already installed. Stop."
-	exit $STATUS_ALREADY_INSTALLED
+	exit $STATUS_CHANGED
 fi
 
 # Setup present working directory
