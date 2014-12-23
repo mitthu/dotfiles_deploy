@@ -1,10 +1,10 @@
-#!/bin/bash -ex
+#!/bin/bash
 # Created on: 21-Aug-2014, 8:41 PM
 # Inspired from: https://gist.github.com/andsens/2913223/raw/bootstrap_homeshick.sh 
 #
 # Run:
 # ---
-# curl -sL <link> | /bin/bash -ex
+# curl -sL <link> | /bin/bash
 
 ## Config ##
 INSTALL_PACKAGES="zsh tmux vim git"
