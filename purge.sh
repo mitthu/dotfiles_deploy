@@ -11,7 +11,7 @@
 # ---
 # curl -sL <link> | /bin/bash
 
-REMOVE_FILES_AND_FOLDERS=".homeshick .homesick .fonts .merc .me .tmux.conf .zshrc .vim .vimrc .oh-my-zsh .local/share/nautilus/scripts"
+REMOVE_FILES_AND_FOLDERS=".homeshick .homesick .fonts .merc .me .tmux.conf .zshrc .vim .vimrc .oh-my-zsh .local/share/nautilus/scripts .ansible.cfg"
 
 cd $HOME
 rm -rf $REMOVE_FILES_AND_FOLDERS
