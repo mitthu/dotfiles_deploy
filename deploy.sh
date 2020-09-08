@@ -7,7 +7,7 @@
 # curl -sL <link> | /bin/bash
 
 ## Config ##
-INSTALL_PACKAGES="zsh tmux vim git"
+INSTALL_PACKAGES="build-essential htop tmux vim git"
 USER=`whoami`
 DOTFILES_REPO="https://github.com/mitthu/dotfiles.git"
 
