@@ -7,7 +7,7 @@
 # curl -sL <link> | /bin/bash
 
 ## Config ##
-INSTALL_PACKAGES="build-essential htop tmux vim git"
+INSTALL_PACKAGES="build-essential htop tmux vim git fish"
 USER=`whoami`
 DOTFILES_REPO="https://github.com/mitthu/dotfiles.git"
 
@@ -118,7 +118,7 @@ if [[ $SKIP_CHANGE_SHELL == "YES" ]]; then
 	echo "Skipping change of default shell..."
 else
 	echo "Changing default shell..."
-	sudo chsh --shell `which zsh` $USER </dev/tty
+	sudo chsh --shell `which fish` $USER </dev/tty
 	echo "Log in again to start your proper shell."
 fi
 
