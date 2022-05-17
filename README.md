@@ -31,11 +31,11 @@ curl -sL http://bit.ly/1wgCwcx | /bin/bash -ex
 
 Deploy Script
 -------------
-- Installs a few packages like tmux, zsh, etc. Works for deb and rpm based distros.
+- Installs a few packages like tmux, fish, etc. Works for deb and rpm based distros.
 - Clones homeshick and uses it for managing the dotfiles. The mitthu/dotfiles repo is actually a castle in homeshick terminology.
 - Clones vundle to manage vim plugins.
 - Configures ssh to trust github and bitbucket.
-- Configures zsh as the default shell for the current user.
+- Configures fish as the default shell for the current user.
 
 Update Script
 -------------
