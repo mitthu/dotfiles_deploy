@@ -82,13 +82,13 @@ else
 fi
 
 ## Install homeshick ##
-git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
+git clone https://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
 source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 ## Install Vundle ##
 # Used to manage vim plugins
 mkdir -p $HOME/.vim/bundle
-git clone git://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
+git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
 
 ## Configure SSH ##
 cd $HOME
